@@ -49,3 +49,5 @@ If you need a refresher on how to add or stage files for commit, please read Git
 Then issue the following commands to perform git configuration:
 
 I have created some specific real-world scenarios that I feel are quite common and useful.
+
+Besides, the script will also add some environment variables into the bash configuration file ~/.bashrc. These variables are defined by absolute path to support the compilation of the subprojects. Therefore, DO NOT move your project to another directory once finishing the initialization, else these variables will become invalid. Particularly, if you use shell other than bash, please set these variables in the corresponding configuration file manually.

@@ -1,0 +1,51 @@
+advancing downward
+
+Carriage return means to return to the beginning of the current line without advancing downward. The name comes from a printer's carriage, as monitors were rare when the name was coined. This is commonly escaped as "\r", abbreviated CR, and has ASCII value 13 or 0xD.
+
+Linefeed means to advance downward to the next line; however, it has been repurposed and renamed. Used as "newline", it terminates lines (commonly confused with separating lines). This is commonly escaped as "\n", abbreviated LF or NL, and has ASCII value 10 or 0xA. CRLF (but not CRNL) is used for the pair "\r\n".
+
+Form feed means advance downward to the next "page". It was commonly used as page separators, but now is also used as section separators. Text editors can use this character when you "insert a page break". This is commonly escaped as "\f", abbreviated FF, and has ASCII value 12 or 0xC.
+
+As control characters, they may be interpreted in various ways.
+
+The most important interpretation is how these characters delimit lines. Lines end with NL on Unix (including OS X), CRLF on Windows, and CR on older Macs. Note the shift in meaning from LF to NL, for the exact same character, gives the differences between Windows and Unix, which is also why many Windows programs use CRLF to separate instead of terminate lines. Many text editors can read files in any of these three formats and convert between them, but not all utilities can.
+
+Form feed is much less commonly used. As page separator, it can only come between lines or at the start or end of the file.
+
+When I first used Vim, it seemed very difficult to stick to hjkl after years of maintining a habit of navigating with arrow keys.
+
+Then I learned actual touch typing.
+
+After that, not only did hjkl feel more natural than the arrow keys. Everything computer-related became faster. It's really worth the investment timewise (I'm assuming you're not a touch typer, otherwise you wouldn't have asked this question).
+
+By the way, Vim is incredibly useful when learning to touch type. Just keep a keyboard diagram closer to the screen than to the actual keyboard when learning, ideally a keybord diagram with vim usage on it.
+
+Let’s open the core file with GDB and assume for a second we do not know what happened (if you’re a seasoned developer, you may have already seen the actual bug in the source!):
+
+you may ignore it for the time being
+
+Next we see the frame (please think about a frame like a procedure in code for the time being) on which the program terminated: frame #0. GDB adds all sorts of handy information to this: the memory address, the procedure name actual_calc, what our variable values were, and even at one line (3) of which file (test.c) the issue happened.
+
+Frame inspection
+
+Here we ‘jump into’ frame 2 by using the f 2 command. f is a short hand for the frame command. Next we list the source code by using the list command, and finally try to print (using the p shorthand command) the value of the a variable, which fails, as at this point a was not defined yet at this point in the code; note we are working at line 17 in the function main(), and the actual context it existed in within the bounds of this function/frame.
+
+All self evident, except for the value reported for c. Note that we had defined the variable c, but had not given it an initial value yet. As such c is really undefined (and it was not filled by the equation c=a/b yet as that one failed) and the resulting value was likely read from some address space to which the variable c was assigned (and that memory space was not initialized/cleared yet).
+
+These three lines of settings make tmux "remember" the current working directory of the current pane while creating new window/pane.
+
+Maximize the terminal windows size, then use tmux to create multiple normal-size terminals within single screen. For example, you may edit different files in different directories simultaneously. You can edit them in different terminals, compile them or execute other commands in another terminal, without opening and closing source files back and forth. You can scroll the content in a tmux terminal up and down. For how to use tmux, please STFW.
+
+session
+
+You should have used scroll bars in GUI. You may take this for granted. So you may consider the original un-scrollable terminal (the one you use when you just log in) the hell. But think of these: why the original terminal can not be scrolled? How does tmux make the terminals scrollable? And last, do you know how to implement a scroll bar?
+
+GUI is not something mysterious. Remember, behind every elements in GUI, there is a story about it. Learn the story, and you will learn a lot. You may say "I just use GUI, and it is unnecessary to learn the story." Yes, you are right. The appearance of GUI is to hide the story for users. But almost everyone uses GUI in the world, and that is why you can not tell the difference between you and them.
+
+I'll come at you harder and faster (provoked)
+
+If you need a refresher on how to add or stage files for commit, please read Git Basics.
+
+Then issue the following commands to perform git configuration:
+
+I have created some specific real-world scenarios that I feel are quite common and useful.
